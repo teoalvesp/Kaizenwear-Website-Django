@@ -1,0 +1,155 @@
+/* Estilos da sidebar */
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: -23%;
+    /* Inicialmente fora da tela */
+    width: 23%;
+    height: 100%;
+    background-color: white;
+    box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease-in-out;
+    overflow-y: auto;
+    
+}
+
+.sidebar.open {
+    right: 0;
+    background-color: #fffffff5;
+    /* Posição aberta */
+    z-index: 900;
+}
+
+h5 {
+    margin: 0;
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.container {
+
+    padding: 5px;
+    margin-bottom: 2rem;
+
+}
+
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.pre-content {
+    width: 100%;
+
+}
+
+.pre-content h5 {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.side-by-side {
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+.content {
+    display: block;
+}
+
+.content p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+
+.content img {
+    width: 90px;
+    background-color: #f0f0f0;
+}
+
+.btn-buy {
+    font-size: 0.95rem;
+    width: 92%;
+    margin-left: 1rem;
+    margin-bottom: 0.8rem;
+    border-radius: 3px;
+}
+
+#cart-sidebar .btn-continue {
+    text-decoration: underline !important;
+    font-size: 0.95rem;
+    color: #000;
+    padding-left: 6.3rem;
+    padding-bottom: 5rem;
+}
+
+.myform-cart {
+    width: 5rem;
+}
+
+.number-input-container {
+    display: flex;
+    padding: 0.2rem 0;
+
+}
+
+.number-input {
+    text-align: center;
+    width: 2.2rem;
+    height: 1.8rem;
+    border: 1px solid #e7e4e4;
+    font-size: 0.9rem;
+    padding-left: 5px;
+}
+
+.number-input:focus {
+    outline: none;
+}
+
+.control-button:focus {
+    outline: none;
+
+}
+
+.control-button {
+    border: none;
+    width: 1.7rem;
+    height: 1.8rem;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1px solid #e7e4e4;
+    background-color: #fff;
+    outline: none;
+    border-radius: 2px;
+}
+
+#btn-remover {
+    font-size: 0.8rem;
+    text-decoration: underline;
+    color: #000;
+
+}
+
+.total {
+    text-align: center;
+}
+
+.total h5 {
+    font-size: 1rem;
+}
+
+#cart-sidebar #btn-icon {
+    padding: 0;
+    position: absolute;
+    top: 1.1rem;
+    left: 0.6rem;
+}
+
+#clear-cart {
+    font-size: 0.8rem;
+    text-decoration: underline;
+    margin-top: 5px;
+}

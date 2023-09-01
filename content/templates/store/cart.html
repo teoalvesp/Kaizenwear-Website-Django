@@ -1,0 +1,42 @@
+{% load static %}
+<!-- Sidebar do carrinho -->
+<div id="cart-sidebar" class="sidebar">
+    <h5><b style="font-size: 1.2rem;">Carrinho</b></h5>
+    <a id="btn-icon" href="#" class="btn-continue">
+        <i class="bi bi-arrow-left">
+            <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="currentColor" class="bi bi-arrow-left"
+                viewBox="0 0 16 16">
+                <path fill-rule="evenodd"
+                    d="M15 8a.5.5 0 0 0-.5-.5H2.707l3.147-3.146a.5.5 0 1 0-.708-.708l-4 4a.5.5 0 0 0 0 .708l4 4a.5.5 0 0 0 .708-.708L2.707 8.5H14.5A.5.5 0 0 0 15 8z" />
+            </svg>
+        </i>
+    </a>
+
+    <div class="container container-cart">
+        <!-- Template vazio para um item de produto -->
+        <a id="clear-cart" href="#">LIMPAR CARRINHO</a>
+
+        <div id="product-template">
+
+        </div>
+
+
+    </div>
+    <div style="display: block;" class="restant-cart">
+        <div class="total">
+            <h5>Total</h5>
+            <p id="totalAmount"><strong>R$ 0,00</strong></p>
+            <br><br>
+        </div>
+
+        <a class="btn-buy btn btn-dark" href="{% url 'checkout' %}">FINALIZAR COMPRA</a>
+        <a class="btn-continue" href="#">CONTINUE COMPRANDO</a>
+        <br><br>
+    </div>
+    <div style="display: none;" class="restant-cart-2">
+        <h5 style="margin-bottom: 2rem;">Carrinho Vazio</h5>
+        <a class="btn-buy btn btn-dark btn-fechar" href="#">FECHAR</a>
+    </div>
+
+
+</div>

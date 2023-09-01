@@ -1,0 +1,80 @@
+{% extends "base/base.html" %}
+
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'store/css/checkout.css' %}">
+{% endblock %}
+
+{% block content %}
+
+<div class="container-main">
+
+    <div class="container-progress">
+        <div class="progress mybar-progress">
+            <div class="progress-bar" role="progressbar" style="width: 0%" aria-valuenow="0" aria-valuemin="0"
+                aria-valuemax="100">
+            </div>
+        </div>
+        <div class="progress-number">
+            <div class="progress-step step1 progress-done">
+                <span class="number">1</span>
+            </div>
+            <div class="progress-step step2">
+                <span class="number">2</span>
+            </div>
+            <div class="progress-step step3">
+                <span class="number">3</span>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="contentContainer">
+        <div class="content" id="content1">
+            {% include 'users/checkout/check1.html' %}
+        </div>
+        <div class="content" id="content2" style="display: none;">
+            {% include 'users/checkout/check2.html' %}
+        </div>
+        <div class="content" id="content3" style="display: none;">
+            {% include 'users/checkout/check3.html' %}
+        </div>
+    </div>
+
+
+    <div class="sidebar-checkout">
+        <div class="content-side">
+            <img src="{% static 'store/img/img-01.jpg' %}" alt="teste">
+            <div class="info-product">
+                <p>Camiseta Kaizenwear Branca</p>
+                <div class="info">
+                    <span>G</span>
+                    <span>R$ 129,90</span>
+                </div>
+            </div>
+
+        </div>
+        <hr>
+        <div class="info">
+            <span>Subtotal</span>
+            <span>R$ 129,90</span>
+        </div>
+        <div class="info">
+            <span>Frete &#10067;</span>
+            <span>R$ 21,83</span>
+        </div>
+        <hr style="border-width: 1px; border-color: rgba(233, 233, 233, 0.985);">
+        <div class="info">
+            <span>Total</span>
+            <span>BRL <b style="font-size: 1.3rem;">R$ 151,73</b></span>
+        </div>
+
+        <button id="btnPay" type="submit" class="btn btn-primary mb-2 btn-dark btn-pay">Ir para Pagamento</button>
+
+
+        {% block scripts %}
+        <script src="{% static 'store/js/checkout.js' %}"></script>
+        {% endblock %}
+
+        {% endblock %}
